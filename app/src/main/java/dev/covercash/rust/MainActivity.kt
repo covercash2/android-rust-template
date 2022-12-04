@@ -3,6 +3,7 @@ package dev.covercash.rust
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -17,6 +18,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        externalLibrary.load()
         setContent {
             RustTemplateAppTheme {
                 // A surface container using the 'background' color from the theme
@@ -24,7 +26,10 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    Column {
+                        Greeting("Android")
+                        Text("1 + 1 = ${externalLibrary.addInts(1, 1)}")
+                    }
                 }
             }
         }

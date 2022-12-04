@@ -1,15 +1,16 @@
 use jni::{JNIEnv, objects::JObject};
 
 #[no_mangle]
-pub unsafe extern "C" fn Java_dev_covercash_rust_addInts(
+pub unsafe extern "C" fn Java_dev_covercash_rust_ExternalLibrary_addInts(
     _env: JNIEnv,
     _this: JObject,
     first: i32,
     second: i32,
 ) -> i32 {
-    first + second
+    add(first, second)
 }
-pub fn add(left: usize, right: usize) -> usize {
+
+pub fn add(left: i32, right: i32) -> i32 {
     left + right
 }
 
