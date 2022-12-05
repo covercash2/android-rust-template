@@ -52,4 +52,8 @@ rustup target add aarch64-linux-android armv7-linux-androideabi
 linker = "<android_sdk>/ndk/<ndk_version>/toolchains/llvm/prebuilt/<host-os>/bin/armv7a-linux-androideabi30-clang++"
    ```
    
-# run the app 
+# run the app
+
+building and copying of the Rust binaries is automated by gradle. tasks were added that build, copy, and cleanup libraries for supported ABIs. these tasks are executed automatically for build and clean tasks.
+
+building the app including the static object binaries is as easy as clicking run in Android Studio or simply running `./gradlew build`.
