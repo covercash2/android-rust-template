@@ -6,12 +6,12 @@
    ```
    
 ## install Android Studio
-   install Android Studio from https://developer.android.com/studio
+install Android Studio from https://developer.android.com/studio
 
 ### Android NDK
-	the NDK is necessary to provide an LLVM toolchain for compiling native binaries for Android devices. the NDK can be downloaded from the SDK manager within Android Studio. 
+the NDK is necessary to provide an LLVM toolchain for compiling native binaries for Android devices. the NDK can be downloaded from the SDK manager within Android Studio. 
 
-	Note the installed version and install location.
+Note the installed version and install location.
 
 # configure Android `jniLibs`
    https://developer.android.com/studio/projects/gradle-external-native-builds#jniLibs
