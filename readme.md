@@ -39,9 +39,9 @@ rustup target add aarch64-linux-android armv7-linux-androideabi
 ## configure cargo
    create a cargo config file at `~/.cargo/config`:
 
-   - `android_sdk` is the install location of the Android android
+   - `android_sdk` is the install location of the Android SDK
    - `host-os` is the architecture of the compiler on the host system. it should be the only one installed by default
-   - `ndk_version` is the version of the installed SDK from the SDK manager
+   - `ndk_version` is the version of the installed NDK from the SDK manager
    - other ABIs will need to be added if you want to support those architectures
    
    ``` toml
